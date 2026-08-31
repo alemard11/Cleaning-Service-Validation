@@ -1,0 +1,10 @@
+{
+  "name": "homeease-ja",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "HomeEase JA concierge cleaning-service validation landing page and WhatsApp notification API.",
+  "engines": {
+    "node": ">=20"
+  }
+}

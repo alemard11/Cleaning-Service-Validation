@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional, reliable cleaning for homes, family properties, Airbnb rentals and small businesses in Jamaica." />
+  <title>HomeEase JA — Professional Cleaning, Made Simple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+  </script>
+  <script type="module">
+    import '@material/web/button/filled-button.js';
+    import '@material/web/button/outlined-button.js';
+    import '@material/web/progress/circular-progress.js';
+  </script>
+  <style>
+    :root{
+      /* Material 3-inspired system tokens, customized for the HomeEase brand. */
+      --md-sys-color-primary:#0b6b44;
+      --md-sys-color-on-primary:#ffffff;
+      --md-sys-color-primary-container:#b8f1d2;
+      --md-sys-color-on-primary-container:#002114;
+      --md-sys-color-secondary:#4f6357;
+      --md-sys-color-secondary-container:#d2e8d9;
+      --md-sys-color-surface:#fbfdf9;
+      --md-sys-color-surface-container:#f0f5f1;
+      --md-sys-color-surface-container-low:#f6faf6;
+      --md-sys-color-outline:#718078;
+      --md-sys-color-outline-variant:#c1cec6;
+      --md-sys-color-on-surface:#18201b;
+      --md-sys-color-on-surface-variant:#414942;
+      --md-sys-color-tertiary:#785900;
+      --md-sys-color-tertiary-container:#ffdf91;
+      --md-sys-shape-corner-small:8px;
+      --md-sys-shape-corner-medium:12px;
+      --md-sys-shape-corner-large:16px;
+      --md-sys-shape-corner-extra-large:28px;
+      --md-sys-elevation-1:0 1px 2px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.08);
+      --md-sys-elevation-2:0 2px 6px rgba(0,0,0,.08),0 6px 18px rgba(0,0,0,.06);
+      --ink:var(--md-sys-color-on-surface);--muted:var(--md-sys-color-on-surface-variant);
+      --green:var(--md-sys-color-primary);--green2:#075b39;--mint:var(--md-sys-color-secondary-container);
+      --gold:#f4c95d;--cream:var(--md-sys-color-surface);--white:#fff;--line:var(--md-sys-color-outline-variant);
+      --shadow:var(--md-sys-elevation-2);--radius:var(--md-sys-shape-corner-extra-large);--max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Roboto,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(251,250,245,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,231,226,.85)}
+    .navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.4px}.mark{width:36px;height:36px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:#fff;font-size:19px;box-shadow:0 8px 20px rgba(11,93,59,.22)}
+    .navlinks{display:flex;gap:26px;color:#48564e;font-size:14px;font-weight:650}.navlinks a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:14px;padding:13px 18px;font-weight:750;border:1px solid transparent;cursor:pointer;font:inherit;transition:.2s ease}.btn:hover{transform:translateY(-1px)}
+    .primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(11,93,59,.18)}.primary:hover{background:var(--green2)}.secondary{border-color:#cad7cf;background:#fff;color:var(--ink)}
+    .hero{padding:82px 0 66px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #cfe1d7;background:#f5fbf7;border-radius:999px;color:var(--green);font-weight:800;font-size:12px;letter-spacing:.02em}.dot{width:7px;height:7px;border-radius:99px;background:var(--gold)}
+    h1{font-size:clamp(44px,6vw,72px);line-height:.98;letter-spacing:-3.1px;margin:20px 0 22px;max-width:760px}.hero p{font-size:19px;color:#536159;max-width:650px;margin:0 0 30px}.heroCtas{display:flex;gap:12px;flex-wrap:wrap}.proof{display:flex;gap:21px;flex-wrap:wrap;margin-top:27px;color:#536159;font-size:13px;font-weight:650}.proof span{display:flex;gap:7px;align-items:center}.check{color:var(--green);font-weight:900}
+    .phoneWrap{position:relative;min-height:590px;display:grid;place-items:center}.halo{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at center,#d9eee3 0,#edf7f1 45%,rgba(237,247,241,0) 70%)}
+    .phone{position:relative;width:360px;border:9px solid #13261c;background:#fff;border-radius:42px;padding:24px 18px 18px;box-shadow:0 35px 90px rgba(22,56,42,.25);transform:rotate(2deg)}.speaker{width:96px;height:20px;border-radius:20px;background:#13261c;position:absolute;top:8px;left:50%;transform:translateX(-50%)}
+    .miniTop{margin-top:14px;display:flex;justify-content:space-between;align-items:center}.miniLogo{font-weight:850}.avatar{width:34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center}
+    .hello{margin:20px 0 12px}.hello small{display:block;color:var(--muted);font-weight:650}.hello strong{font-size:25px;letter-spacing:-.7px}.search{padding:14px 13px;background:#f5f7f5;border:1px solid #e5ebe7;border-radius:15px;color:#788279;font-size:13px}
+    .miniTitle{display:flex;justify-content:space-between;margin:21px 0 10px;align-items:end}.miniTitle b{font-size:15px}.miniTitle span{font-size:11px;color:var(--green);font-weight:700}
+    .serviceMini{display:grid;grid-template-columns:1fr 1fr;gap:10px}.smCard{border:1px solid #e3e9e5;padding:13px;border-radius:16px;min-height:102px}.smIcon{width:34px;height:34px;border-radius:10px;background:var(--mint);display:grid;place-items:center;margin-bottom:8px}.smCard b{font-size:12px;display:block}.smCard span{font-size:10px;color:var(--muted)}
+    .status{margin-top:14px;padding:13px;border-radius:16px;background:var(--green);color:white}.statusTop{display:flex;justify-content:space-between;align-items:center;font-size:11px;opacity:.92}.status h4{font-size:14px;margin:8px 0}.progress{height:5px;background:rgba(255,255,255,.25);border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;width:68%;background:var(--gold);border-radius:99px}
+    .section{padding:82px 0}.white{background:#fff}.sectionHead{max-width:720px;margin-bottom:38px}.kicker{color:var(--green);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.12em}.section h2{font-size:clamp(34px,4vw,48px);line-height:1.05;letter-spacing:-1.7px;margin:9px 0 14px}.sectionHead p{color:var(--muted);font-size:17px;margin:0}
+    .trustGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.trustCard,.serviceCard,.step,.quoteCard{background:var(--md-sys-color-surface-container-low);border:1px solid var(--line);border-radius:var(--radius);padding:24px}.trustCard .ico,.step .num{width:44px;height:44px;border-radius:14px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-weight:850;font-size:18px}.trustCard h3{margin:18px 0 7px;font-size:17px}.trustCard p{margin:0;color:var(--muted);font-size:14px}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.serviceCard{display:flex;flex-direction:column;min-height:300px}.serviceCard.featured{border:2px solid var(--green);position:relative}.tag{position:absolute;right:16px;top:16px;border-radius:999px;background:var(--green);color:#fff;font-size:10px;padding:6px 9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.serviceCard h3{font-size:20px;margin:6px 0}.price{font-size:27px;font-weight:850;letter-spacing:-1px;margin:4px 0 10px}.price small{font-size:12px;color:var(--muted);font-weight:600}.serviceCard p{color:var(--muted);font-size:14px}.serviceCard ul{list-style:none;padding:0;margin:12px 0 22px;display:grid;gap:9px;font-size:13px;color:#4c5a52}.serviceCard li:before{content:'✓';color:var(--green);font-weight:900;margin-right:8px}.serviceCard .btn{margin-top:auto}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:var(--md-sys-color-surface-container-low)}.step .num{background:var(--green);color:#fff}.step h3{margin:18px 0 7px}.step p{color:var(--muted);font-size:14px;margin:0}
+    .diaspora{background:var(--green);color:#fff;border-radius:34px;padding:48px;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;position:relative;overflow:hidden}.diaspora:after{content:'';position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-90px;top:-105px}.diaspora h2{color:#fff;margin-top:0}.diaspora p{color:#dcebe3;font-size:17px}.diaspora .secondary{border-color:rgba(255,255,255,.25)}.remoteCard{position:relative;z-index:2;background:#fff;color:var(--ink);border-radius:24px;padding:22px;box-shadow:0 25px 65px rgba(0,0,0,.16)}.remoteRow{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ebefec;padding:13px 0}.remoteRow:last-child{border:0}.pill{font-size:11px;border-radius:999px;padding:5px 8px;background:var(--mint);color:var(--green);font-weight:800}
+    .qualityGrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.checklist{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow)}.checkrow{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #edf0ee}.checkrow:last-child{border:0}.tick{flex:0 0 26px;height:26px;border-radius:8px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-size:13px;font-weight:900}.checkrow b{display:block;font-size:14px}.checkrow span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    .formSection{padding:88px 0;background:#eff6f2}.formGrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:start}.formIntro{position:sticky;top:105px}.formIntro h2{font-size:44px;letter-spacing:-1.7px;line-height:1.04;margin:10px 0 16px}.formIntro p{color:var(--muted);font-size:16px}.note{margin-top:22px;border-left:3px solid var(--gold);padding:4px 0 4px 14px;color:#546158;font-size:13px}
+    form{background:#fff;border-radius:28px;padding:28px;box-shadow:var(--shadow);border:1px solid #dce8e1}.formTitle{font-size:21px;margin:0 0 4px}.formSub{color:var(--muted);font-size:13px;margin:0 0 24px}.fieldGrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:780;color:#3f4d45}input,select,textarea{width:100%;min-height:56px;border:1px solid var(--md-sys-color-outline);background:transparent;border-radius:var(--md-sys-shape-corner-small);padding:15px 14px 11px;font:inherit;font-size:14px;color:var(--ink);outline:none;transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}textarea{resize:vertical;min-height:112px}input:focus,select:focus,textarea:focus{border:2px solid var(--md-sys-color-primary);padding:14px 13px 10px;box-shadow:none;background:#fff}
+    .material-symbols-rounded{font-size:20px;line-height:1;vertical-align:middle}
+    md-filled-button,md-outlined-button{--md-filled-button-container-shape:999px;--md-outlined-button-container-shape:999px;--md-filled-button-container-color:var(--md-sys-color-primary);--md-filled-button-label-text-color:#fff;--md-outlined-button-outline-color:var(--md-sys-color-outline);font-family:Roboto,Arial,sans-serif}
+    md-filled-button.submit{width:100%;--md-filled-button-container-height:52px}
+    .field label{font-size:12px;font-weight:700;color:var(--md-sys-color-on-surface-variant);letter-spacing:.02em}
+    .consent{display:flex;gap:9px;align-items:flex-start;margin:17px 0;color:var(--muted);font-size:11px}.consent input{width:auto;margin-top:3px}.submit{width:100%;padding:15px}.success{display:none;margin-top:14px;background:var(--mint);color:var(--green);border:1px solid #cde1d5;border-radius:13px;padding:12px;font-size:13px;font-weight:700}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:13px}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}.faq summary{cursor:pointer;font-weight:750;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq p{color:var(--muted);font-size:14px;margin:12px 0 0}
+    footer{padding:38px 0;background:#15231b;color:#c8d5cd}.foot{display:flex;justify-content:space-between;gap:30px;align-items:center}.foot .brand{color:#fff}.foot small{font-size:11px}.work{font-size:10px;border:1px solid #45564d;border-radius:999px;padding:5px 8px;margin-left:8px;color:#d7e0da}
+    .mobileCta{display:none}
+    @media(max-width:950px){.navlinks{display:none}.heroGrid,.diaspora,.qualityGrid,.formGrid{grid-template-columns:1fr}.hero{padding-top:52px}.phoneWrap{min-height:540px}.trustGrid,.services,.steps{grid-template-columns:1fr 1fr}.formIntro{position:static}.services .serviceCard{min-height:auto}}
+    @media(max-width:610px){.wrap{padding:0 18px}.navin{height:66px}.nav .primary{display:none}.hero{padding:44px 0 42px}.heroGrid{gap:30px}h1{font-size:48px;letter-spacing:-2.2px}.hero p{font-size:17px}.phoneWrap{min-height:490px}.phone{width:310px}.trustGrid,.services,.steps,.faq,.fieldGrid{grid-template-columns:1fr}.section{padding:62px 0}.diaspora{padding:30px 24px;border-radius:26px}.formSection{padding:62px 0}.formIntro h2{font-size:36px}form{padding:21px}.field.full{grid-column:auto}.foot{align-items:flex-start;flex-direction:column}.mobileCta{position:fixed;display:block;z-index:50;left:14px;right:14px;bottom:12px}.mobileCta .btn{width:100%;box-shadow:0 14px 38px rgba(11,93,59,.28)}body{padding-bottom:72px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top"><span class="mark">✦</span><span>HomeEase JA</span></a>
+      <div class="navlinks"><a href="#services">Services</a><a href="#how">How it works</a><a href="#quality">Our standard</a><a href="#faq">FAQ</a></div>
+      <a class="btn primary" href="#request">Request a cleaning →</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> Early access • Select communities in Jamaica</span>
+          <h1>A cleaner home.<br/>Without the back-and-forth.</h1>
+          <p>Professional cleaning for homes, family properties and short-term rentals — with clear service standards, reliable scheduling and a customer experience built for your phone.</p>
+          <div class="heroCtas">
+            <a class="btn primary" href="#request">Request a cleaning →</a>
+            <a class="btn secondary" href="#services">Explore services</a>
+          </div>
+          <div class="proof"><span><i class="check">✓</i> Vetted professionals</span><span><i class="check">✓</i> Clear service scope</span><span><i class="check">✓</i> Quality checklist</span><span><i class="check">✓</i> Easy rebooking</span></div>
+        </div>
+        <div class="phoneWrap" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="phone">
+            <div class="speaker"></div>
+            <div class="miniTop"><div class="miniLogo">HomeEase <span style="color:var(--green)">JA</span></div><div class="avatar">👤</div></div>
+            <div class="hello"><small>Good morning</small><strong>What can we clean?</strong></div>
+            <div class="search">⌕ &nbsp; Enter your area or property</div>
+            <div class="miniTitle"><b>Popular services</b><span>See all</span></div>
+            <div class="serviceMini">
+              <div class="smCard"><div class="smIcon">🧹</div><b>Standard Clean</b><span>From J$10,000</span></div>
+              <div class="smCard"><div class="smIcon">✨</div><b>Deep Clean</b><span>From J$16,000</span></div>
+              <div class="smCard"><div class="smIcon">🏠</div><b>Move Clean</b><span>From J$18,000</span></div>
+              <div class="smCard"><div class="smIcon">🧳</div><b>Airbnb Turnover</b><span>From J$8,000</span></div>
+            </div>
+            <div class="status"><div class="statusTop"><span>Today's clean</span><span>In progress</span></div><h4>2 bed • 2 bath • Standard</h4><div class="progress"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white">
+      <div class="wrap">
+        <div class="sectionHead"><span class="kicker">Why HomeEase</span><h2>Cleaning should feel dependable, not unpredictable.</h2><p>We are designing the service around the parts customers care about most: trust, clarity, reliability and consistent quality.</p></div>
+        <div class="trustGrid">
+          <div class="trustCard"><div class="ico">✓</div><h3>Vetted cleaners</h3><p>Professionals are reviewed before they enter a customer's home or property.</p></div>
+          <div class="trustCard"><div class="ico">≡</div><h3>Clear scope</h3><p>Know what is included before the clean begins — no vague promises or guesswork.</p></div>
+          <div class="trustCard"><div class="ico">◷</div><h3>Reliable scheduling</h3><p>Defined arrival windows, confirmation and proactive communication if plans change.</p></div>
+          <div class="trustCard"><div class="ico">★</div><h3>Quality standard</h3><p>Every service follows a checklist so quality is repeatable across cleaners and visits.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="sectionHead"><span class="kicker">Pilot services</span><h2>Choose the clean that fits the moment.</h2><p>These are early pricing hypotheses for validation. Final pricing will depend on property size, condition, location and selected add-ons.</p></div>
+        <div class="services">
+          <div class="serviceCard featured"><span class="tag">Most common</span><h3>Standard Clean</h3><div class="price">J$10,000 <small>starting</small></div><p>For regular upkeep and a consistently fresh home.</p><ul><li>Kitchen surfaces</li><li>Bathrooms</li><li>Bedrooms & living areas</li><li>Dust, sweep & mop</li></ul><a class="btn primary servicePick" data-service="Standard Clean" href="#request">Request this clean</a></div>
+          <div class="serviceCard"><h3>Deep Clean</h3><div class="price">J$16,000 <small>starting</small></div><p>A detailed reset for homes that need extra attention.</p><ul><li>Everything in Standard</li><li>Detailed buildup removal</li><li>Baseboards & fixtures</li><li>Expanded kitchen/bath detail</li></ul><a class="btn secondary servicePick" data-service="Deep Clean" href="#request">Request this clean</a></div>
+          <div class="serviceCard"><h3>Move Clean</h3><div class="price">J$18,000 <small>starting</small></div><p>For move-ins, move-outs and empty-property resets.</p><ul><li>Detailed room cleaning</li><li>Cabinet/surface focus</li><li>Bathrooms & kitchen</li><li>Empty-home attention</li></ul><a class="btn secondary servicePick" data-service="Move-In / Move-Out" href="#request">Request this clean</a></div>
+          <div class="serviceCard"><h3>Airbnb Turnover</h3><div class="price">J$8,000 <small>starting</small></div><p>Guest-ready turnovers with timing and presentation in mind.</p><ul><li>Turnover checklist</li><li>Bed reset / linen option</li><li>Kitchen & bathroom</li><li>Optional restocking</li></ul><a class="btn secondary servicePick" data-service="Airbnb Turnover" href="#request">Request this clean</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="how">
+      <div class="wrap">
+        <div class="sectionHead"><span class="kicker">How it works</span><h2>Simple enough to book from your phone.</h2></div>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><h3>Tell us about the property</h3><p>Share the location, property type, size and the service you need.</p></div>
+          <div class="step"><div class="num">2</div><h3>Get confirmation</h3><p>During the pilot, our team follows up manually to confirm scope, price and timing.</p></div>
+          <div class="step"><div class="num">3</div><h3>We clean to a standard</h3><p>Your cleaner follows a defined checklist designed for that service.</p></div>
+          <div class="step"><div class="num">4</div><h3>Review & rebook</h3><p>Tell us how we did and make the next clean easier to schedule.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap diaspora">
+        <div><span class="kicker" style="color:#f4d98f">For family abroad</span><h2>Take care of home, even when you're away.</h2><p>Live overseas but want to arrange cleaning for a parent, relative, rental or family property in Jamaica? Request the service remotely and coordinate directly with our team.</p><a class="btn secondary servicePick" data-service="Cleaning for family/property from abroad" href="#request">Request for family or property →</a></div>
+        <div class="remoteCard">
+          <div style="font-size:13px;color:var(--muted);font-weight:700">REMOTE CLEANING REQUEST</div>
+          <h3 style="font-size:22px;margin:5px 0 14px">Mum's Home • Jamaica</h3>
+          <div class="remoteRow"><span>Service</span><b>Standard Clean</b></div>
+          <div class="remoteRow"><span>Cleaner</span><b>To be confirmed</b></div>
+          <div class="remoteRow"><span>Status</span><span class="pill">Requested</span></div>
+          <div class="remoteRow"><span>Completion</span><b>Checklist + confirmation</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="quality">
+      <div class="wrap qualityGrid">
+        <div><span class="kicker">The HomeEase standard</span><h2>We're standardizing the work, not just finding a cleaner.</h2><p style="color:var(--muted);font-size:17px">The service promise needs an operating system behind it. Each cleaning type has a defined checklist, training expectations and a feedback loop so we can improve quality over time.</p><div class="proof" style="margin-top:24px"><span><i class="check">✓</i> Repeatable quality</span><span><i class="check">✓</i> Easier training</span><span><i class="check">✓</i> Clear customer expectations</span></div></div>
+        <div class="checklist">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px"><b>Standard Clean • Example checklist</b><span class="pill">12 / 12</span></div>
+          <div class="checkrow"><div class="tick">✓</div><div><b>Kitchen surfaces cleaned</b><span>Counters, sink, exterior surfaces and high-touch points.</span></div></div>
+          <div class="checkrow"><div class="tick">✓</div><div><b>Bathrooms refreshed</b><span>Toilet, sink, shower/tub, mirror and floor.</span></div></div>
+          <div class="checkrow"><div class="tick">✓</div><div><b>Bedrooms & living spaces</b><span>Dust accessible surfaces, sweep/vacuum and mop as appropriate.</span></div></div>
+          <div class="checkrow"><div class="tick">✓</div><div><b>Final quality check</b><span>Cleaner reviews the promised scope before completion.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formSection" id="request">
+      <div class="wrap formGrid">
+        <div class="formIntro"><span class="kicker">Early access</span><h2>Would you use a cleaning service like this?</h2><p>We're validating demand before a full launch. Tell us what you need and where you are. During the pilot, a real person will confirm availability, service scope and pricing.</p><div class="note"><b>No automatic charge.</b> Submitting this form is a request for early access or a quote, not a confirmed booking.</div></div>
+        <form id="leadForm">
+          <h3 class="formTitle">Request a cleaning</h3><p class="formSub">Takes about 60 seconds.</p>
+          <div class="fieldGrid">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. Marsha Brown" /></div>
+            <div class="field"><label for="whatsapp">WhatsApp / phone</label><input id="whatsapp" name="whatsapp" autocomplete="tel" required placeholder="+1 876 ..." /></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" /></div>
+            <div class="field"><label for="parish">Parish / area</label><select id="parish" name="parish" required><option value="">Select</option><option>Kingston</option><option>St. Andrew</option><option>St. Catherine</option><option>St. James</option><option>Manchester</option><option>Westmoreland</option><option>Other</option></select></div>
+            <div class="field"><label for="property">Who / what is the cleaning for?</label><select id="property" name="property" required><option value="">Select</option><option>My home</option><option>A family member's home</option><option>Airbnb / short-term rental</option><option>Rental / vacation property</option><option>Small business / office</option></select></div>
+            <div class="field"><label for="service">Service</label><select id="service" name="service" required><option value="">Select</option><option>Standard Clean</option><option>Deep Clean</option><option>Move-In / Move-Out</option><option>Airbnb Turnover</option><option>Cleaning for family/property from abroad</option><option>Business Cleaning</option><option>Not sure</option></select></div>
+            <div class="field"><label for="frequency">How often?</label><select id="frequency" name="frequency" required><option value="">Select</option><option>One time</option><option>Weekly</option><option>Every 2 weeks</option><option>Monthly</option><option>After every guest</option><option>Not sure</option></select></div>
+            <div class="field"><label for="date">Preferred date</label><input id="date" name="preferred_date" type="date" /></div>
+            <div class="field"><label for="beds">Bedrooms</label><select id="beds" name="bedrooms"><option>Not applicable</option><option>Studio / 0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+            <div class="field"><label for="baths">Bathrooms</label><select id="baths" name="bathrooms"><option>Not applicable</option><option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>4+</option></select></div>
+            <div class="field full"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Property condition, access, special areas, whether you are booking from overseas, etc."></textarea></div>
+          </div>
+          <div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+          <label class="consent"><input type="checkbox" required /> <span>I understand this is an early-access request. I agree to be contacted about the pilot and understand that availability and final pricing must be confirmed.</span></label>
+          <button class="btn primary submit" type="submit">Submit request <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span></button>
+          <div class="success" id="success">Thanks — your request is ready to submit. When the backend is configured, your family will receive a WhatsApp alert for each request.</div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="sectionHead"><span class="kicker">FAQ</span><h2>Before you request a clean.</h2></div>
+        <div class="faq">
+          <details><summary>Is HomeEase JA already operating everywhere?</summary><p>No. This page is designed for an early pilot. We will confirm whether your area is currently supported before scheduling any service.</p></details>
+          <details><summary>Are the prices final?</summary><p>No. The prices shown are pilot starting points. Final quotes may vary based on size, condition, travel, special requests and add-ons.</p></details>
+          <details><summary>Do I need to be in Jamaica to request a clean?</summary><p>No. One of the use cases we are exploring is allowing people abroad to arrange cleaning for family members and properties in Jamaica.</p></details>
+          <details><summary>What makes the service different?</summary><p>We are building around standardized cleaning checklists, clearer service scope, cleaner vetting, reliable scheduling and a mobile-first customer experience rather than an informal referral-only process.</p></details>
+          <details><summary>Will I have to download an app?</summary><p>No. The initial experience is designed to work well from a mobile browser. A native app would only make sense after the service has proven strong repeat usage.</p></details>
+          <details><summary>How will payment work?</summary><p>Payment methods are still being validated. No payment is collected through this prototype page. Any paid pilot service should have its final price and payment method confirmed directly with the customer first.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><a class="brand" href="#top"><span class="mark">✦</span><span>HomeEase JA <span class="work">working brand</span></span></a><small>Early concept for customer validation • Jamaica • 2026</small></div></footer>
+  <div class="mobileCta"><a class="btn primary" href="#request">Request a cleaning →</a></div>
+
+  <script>
+    // CONCIERGE CONFIGURATION
+    // Replace with your real form endpoint before sending public traffic.
+    // Example: a form service endpoint or your own API endpoint.
+    const FORM_ENDPOINT = "/api/request-cleaning";
+
+    document.querySelectorAll('.servicePick').forEach(link => {
+      link.addEventListener('click', () => {
+        const select = document.getElementById('service');
+        const target = link.dataset.service;
+        [...select.options].forEach(o => { if(o.value === target) select.value = target; });
+      });
+    });
+
+    const date = document.getElementById('date');
+    const today = new Date();
+    date.min = today.toISOString().split('T')[0];
+
+    document.getElementById('leadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const data = Object.fromEntries(new FormData(form).entries());
+      const success = document.getElementById('success');
+      const submit = form.querySelector('button.submit');
+      if (FORM_ENDPOINT && location.protocol !== 'file:') {
+        try {
+          submit.disabled = true;
+          submit.textContent = 'Sending…';
+          const response = await fetch(FORM_ENDPOINT, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(data)
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(result.error || `Form submission failed (${response.status})`);
+          success.textContent = "Thanks — we received your request. We'll follow up to confirm availability and next steps.";
+          success.style.display = 'block';
+          form.reset();
+          success.scrollIntoView({behavior:'smooth', block:'center'});
+        } catch(err) {
+          console.error(err);
+          success.textContent = `Could not submit: ${err.message}. If you're testing locally, deploy the folder to Vercel first so /api/request-cleaning exists.`;
+          success.style.display = 'block';
+          success.scrollIntoView({behavior:'smooth', block:'center'});
+        } finally {
+          submit.disabled = false;
+          submit.innerHTML = 'Submit request <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>';
+        }
+      } else {
+        const leads = JSON.parse(localStorage.getItem('homeease_demo_leads') || '[]');
+        leads.push({...data, captured_at:new Date().toISOString()});
+        localStorage.setItem('homeease_demo_leads', JSON.stringify(leads));
+        success.textContent = 'Demo mode: request saved in this browser only. Deploy the folder to Vercel to trigger WhatsApp notifications.';
+        success.style.display = 'block';
+        success.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+  </script>
+</body>
+</html>
